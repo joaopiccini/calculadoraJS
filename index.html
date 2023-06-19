@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Desenvolvimento de Site</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand navbar-dark bg-dark fixed-top">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link px-4" onclick="changeTool('operacoes')">Calculadora</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-4" onclick="changeTool('imc')">Cálculo de IMC</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-4" onclick="changeTool('formulario')">Formulário</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="calculadora">
+            <div id="reference" class="container mt-5">
+                <h1 class="text-center operacoes">Calculadora</h1>
+                <h1 class="text-center imc invisible">IMC</h1>
+                <div class="row mt-5">
+                    <div class="col-md-6">
+                        <input type="text" id="visor" class="form-control" readonly/>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-3">
+                        <button type="button" onclick="addCaracter(7)" class="btn btn-secondary btn-block">7</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" onclick="addCaracter(8)" class="btn btn-secondary btn-block">8</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" onclick="addCaracter(9)" class="btn btn-secondary btn-block">9</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" onclick="addCaracter('/')" class="btn btn-warning btn-block operacoes">/</button>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-3">
+                        <button type="button" onclick="addCaracter(4)" class="btn btn-secondary btn-block">4</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" onclick="addCaracter(5)" class="btn btn-secondary btn-block">5</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" onclick="addCaracter(6)" class="btn btn-secondary btn-block">6</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" onclick="addCaracter('*')" class="btn btn-warning btn-block operacoes">*</button>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-3">
+                        <button type="button" onclick="addCaracter(1)" class="btn btn-secondary btn-block">1</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" onclick="addCaracter(2)" class="btn btn-secondary btn-block">2</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" onclick="addCaracter(3)" class="btn btn-secondary btn-block">3</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" onclick="addCaracter('-')" class="btn btn-warning btn-block operacoes">-</button>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-3">
+                        <button type="button" onclick="addCaracter(0)" class="btn btn-secondary btn-block">0</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" onclick="limparVisor()" class="btn btn-success btn-block">C</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" onclick="realizarCalculo()" class="btn btn-success btn-block">=</button>
+                    </div>
+            
+                    <div class="col-md-3">
+                        <button type="button" onclick="addCaracter('+')" class="btn btn-warning btn-block operacoes">+</button>
+                    </div>
+                </div>
+                <button id="btn-imc" type="button" onclick="calcularIMC()" class="btn btn-warning imc invisible">IMC</button>
+            </div>
+            <div class="container-mini imc invisible">
+                <p>Para calcular o IMC siga os passos abaixo:</p>
+                <p>Primeiro digite sua altura em centímetros e pressione a tecla IMC.</p>
+                <span>Depois digite seu peso em Kg e pressione a tecla =.</span>
+            </div>
+        </div>
+        <div class="formulario invisible">
+            <div class="container">
+                <h1>Formulário</h1>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" class="form-control">
+
+                <label for="email">Email:</label>
+                <input type="text" id="email" class="form-control">
+
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone" class="form-control">
+
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" class="form-control">
+
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-center btn-success" onclick="gerarJSON()">Enviar</button>
+                </div>
+            </div>
+            <div class="container json invisible"></div>
+        </div>
+    <script src="script.js"></script>
+    </body>
+</html>

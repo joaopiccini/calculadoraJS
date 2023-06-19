@@ -1,0 +1,112 @@
+body {
+    background-image: url('bg-rock.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+nav li {
+    cursor: pointer;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+    background-color: #212529;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.container-mini {
+    position: absolute;
+    width: 200px;
+    margin: 0 auto;
+    background-color: #212529;
+    border-radius: 15px;
+    padding: 20px;
+    top: 35%;
+    left: 12%;
+}
+  
+h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #FC554C;
+}
+  
+.row {
+     margin-bottom: 10px;
+}
+  
+input {
+    font-size: 24px;
+    text-align: right;
+}
+  
+button {
+    font-size: 24px;
+    height: 60px;
+}
+  
+.btn-secondary {
+    background-color: #ddd;
+    color: #333;
+    border: none;
+}
+  
+.btn-warning {
+    background-color: #FC554C;
+    color: #fff;
+    border: none;
+}
+  
+.btn-success {
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+}
+  
+.btn-block {
+    width: 100%;
+    margin: 0;
+}
+
+.btn-center {
+    width: 25%;    
+}
+
+#reference {
+    position: relative;
+}
+
+#btn-imc {
+    position: absolute;
+    left: 77%;
+    top: 34%;
+    height: 288px;
+    width: 72px;
+}
+
+.calculadora,
+.formulario {
+    margin-top: 8%;
+}
+
+.formulario input {
+    margin-bottom: 1em;
+}
+
+label, p, span, pre {
+    color: #ddd;
+}
+
+.json {
+    margin-top: 1em;
+}
+
+.invisible {
+    display: none;
+}
